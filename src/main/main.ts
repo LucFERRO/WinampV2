@@ -36,6 +36,8 @@ if (process.env.NODE_ENV === 'production') {
   sourceMapSupport.install();
 }
 
+process.env.TEST="testestst"
+
 const isDebug =
   process.env.NODE_ENV === 'development' || process.env.DEBUG_PROD === 'true';
 

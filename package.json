@@ -114,7 +114,9 @@
     "electron-updater": "^5.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.0"
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.4.0",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "@electron/notarize": "^1.2.3",
@@ -169,7 +171,7 @@
     "react-refresh": "^0.14.0",
     "react-test-renderer": "^18.2.0",
     "rimraf": "^3.0.2",
-    "sass": "^1.54.4",
+    "sass": "^1.57.1",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.5",

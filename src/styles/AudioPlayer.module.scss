@@ -1,0 +1,114 @@
+@use "variables" as var;
+
+.audioPlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .forwardBackward {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover {
+            color: var.$primary;
+        }
+    }
+
+    .playPause {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        background-color: var.$primary;
+
+        .play {
+            position: relative;
+            left: 3px;
+        }
+    }
+
+    .currentTime,
+    .duration {
+        font-size: 1.2rem;
+    }
+
+    .currentTime {
+        margin-left: 25px;
+    }
+
+    .progressBar {
+        --bar-background: #ce4800;
+        --seek-before-width: 100px;
+        --seek-before-color: #ffc2a1;
+        --knobby: #3452a5;
+        --selectedKnobby: #26c9c3;
+
+        appearance: none;
+        outline: none;
+        background: var(--bar-background);
+        position: relative;
+        border-radius: 10px;
+        width: 100%;
+        height: 11px;
+
+        &::before {
+            content: '';
+            width: var(--seek-before-width);
+            height: 11px;
+            background-color: var(--seek-before-color);
+            border-radius: 10px 0 0 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        &::-webkit-slider-thumb {
+            background: red;
+            color: red;
+        }
+
+
+        // Firefox?
+        &::-moz-range-track {
+            outline: none;
+            background: var(--bar-background);
+            position: relative;
+            border-radius: 10px;
+            width: 100%;
+            height: 11px;
+        }
+
+        &::-moz-range-progress {
+            height: 11px;
+            background-color: var(--seek-before-color);
+            border-radius: 10px 0 0 10px;
+        }
+
+        &::-moz-range-thumb {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border: transparent;
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+            z-index: 3;
+            box-sizing: border-box;
+        }
+
+        &::-moz-focus-outer {
+            border: 0;
+        }
+    }
+
+}
